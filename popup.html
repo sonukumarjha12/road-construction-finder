@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Construction Finder</title>
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🚧 Road Construction Finder</h1>
+
+        <!-- API KEY -->
+
+        <div id="apiSection">
+
+            <label for="apiKey">Gemini API Key</label>
+
+            <input
+                type="password"
+                id="apiKey"
+                placeholder="Paste your Gemini API Key">
+
+            <button id="saveApiBtn">
+                Save API Key
+            </button>
+
+            <hr>
+
+        </div>
+
+        <!-- COORDINATES -->
+
+        <label for="coordinates">
+            Coordinates
+        </label>
+
+        <input
+            type="text"
+            id="coordinates"
+            placeholder="Example: 17.385044,78.486671">
+
+        <!-- ROAD ADDRESS -->
+
+        <label for="roadAddress">
+            Road Address
+        </label>
+
+        <textarea
+            id="roadAddress"
+            rows="3"
+            placeholder="Enter Road Address"></textarea>
+
+        <!-- SEARCH -->
+
+        <button id="searchBtn">
+            🔍 Search
+        </button>
+
+        <hr>
+
+        <!-- RESULTS -->
+
+        <div id="result">
+
+            <div class="result-card">
+
+                <h2>Search Result</h2>
+
+                <div class="result-item">
+                    <span class="title">Construction Found</span>
+                    <span id="constructionFound">--</span>
+                </div>
+
+                <div class="result-item">
+                    <span class="title">Start Date</span>
+                    <span id="startDate">--</span>
+                </div>
+
+                <div class="result-item">
+                    <span class="title">End Date</span>
+                    <span id="endDate">--</span>
+                </div>
+
+                <div class="result-item">
+                    <span class="title">Impact</span>
+                    <span id="impact">--</span>
+                </div>
+
+                <div class="result-item">
+                    <span class="title">Confidence</span>
+                    <span id="confidence">--</span>
+                </div>
+
+                <div class="result-item">
+                    <span class="title">Summary</span>
+
+                    <div id="summary">
+                        --
+                    </div>
+
+                </div>
+
+                <div class="result-item">
+                    <span class="title">Official Sources</span>
+
+                    <div id="sources">
+                        --
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="js/storage.js"></script>
+    <script src="js/prompt.js"></script>
+    <script src="js/gemini.js"></script>
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
